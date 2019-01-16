@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Year</th>
+                <th>Gender</th>
+                <th>Research</th>
+            </tr>
+        </thead>
+    <!-- name & school are the assigned names to the input tag and the select tag. -->
+        <tbody>
+            {% for elem in fieldnames %}
+            <tr>
+                <td>{{elem["name"] }}</td>
+                <td>{{elem["email"] }}</td>
+                <td>{{elem["year"]}}</td>
+                <td>{{elem["gender"]}}</td>
+                <td>{{elem["research"]}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
